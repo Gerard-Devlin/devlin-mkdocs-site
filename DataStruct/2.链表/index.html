@@ -963,7 +963,7 @@
 <li>Insert/remove/add – O(n)</li>
 </ol>
 <h1 id="linked-list"><strong><em>Linked</em></strong> List</h1>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241017173614449.png" alt="image-20241017173614449" style="zoom:40%;" /></p>
+<p><img alt="list.svg" src="../../assets/images/list.svg" /></p>
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w">   </span><span class="c1">//4 bytes</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="w"> </span><span class="c1">//4 bytes</span>
@@ -1027,8 +1027,6 @@
 </ul>
 <hr />
 <h1 id="implementation-in-ccsingly-linked-list">Implementation in C/C++(<strong><em>singly</em></strong>-linked list)</h1>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241017175317654.png" alt="image-20241017175317654" style="zoom:50%;" /></p>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241017175604818.png" alt="image-20241017175604818" style="zoom:50%;" /></p>
 <hr />
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">A</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">A</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span><span class="c1">//empty list</span>
@@ -1043,7 +1041,6 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">temp</span><span class="o">-&gt;</span><span class="n">link</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">A</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
 </span></code></pre></div>
-<p><img alt="image" src="images/image-20241017181517843.png" /></p>
 <hr />
 <h2 id="basicstraversal-of-the-list">‼️Basics：<strong>Traversal</strong> of the list</h2>
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">while</span><span class="p">(</span><span class="n">temp1</span><span class="o">-&gt;</span><span class="n">link</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
@@ -1096,7 +1093,9 @@
 </span></code></pre></div>
 <hr />
 <h2 id="2insert-in-the-middle">2）Insert in the middle</h2>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241018100002893.png" alt="image-20241018100002893" style="zoom:50%;" /></p>
+<p><img alt="list-insert-1.svg" src="../../assets/images/list-insert-1.svg" /></p>
+<p><img alt="list-insert-2.svg" src="../../assets/images/list-insert-2.svg" /></p>
+<p><img alt="list-insert-3.svg" src="../../assets/images/list-insert-3.svg" /></p>
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">Node</span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
@@ -1401,7 +1400,7 @@
 </div>
 <hr />
 <h1 id="doubly-linked-list"><strong><em>Doubly</em></strong> Linked List</h1>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241018151148918.png" alt="image-20241018151148918" style="zoom:50%;" /></p>
+<p><img alt="list.svg" src="../../assets/images/list.svg" /></p>
 <h4 align='center'>
     singly linked list
 </h4>
@@ -1409,19 +1408,19 @@
 <ul>
 <li>one link to the previous and one link to the next</li>
 </ul>
-<div class="language-c++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+<p><div class="language-c++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="o">*</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="o">*</span><span class="w"> </span><span class="n">prev</span><span class="p">;</span>
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">};</span>
 </span></code></pre></div>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241018151515106.png" alt="image-20241018151515106" style="zoom:50%;" /></p>
+<img alt="double-list.svg" src="../../assets/images/double-list.svg" /></p>
 <h4 align='center'>
     doubly linked list
 </h4>
 
-<blockquote>
-<p>[!IMPORTANT]</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <table>
 <thead>
 <tr>
@@ -1436,10 +1435,10 @@
 </tr>
 </tbody>
 </table>
-</blockquote>
+</div>
 <hr />
 <h1 id="implementation-in-ccdoubly-linked-list">Implementation in C/C++(<strong><em>doubly</em></strong>-linked list)</h1>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241018154345319.png" alt="image-20241018154345319" style="zoom:40%;" /></p>
+<p><img alt="wrong-way.png" src="../../assets/images/wrong-way.png" /></p>
 <h4 align='center'>wrong way</h4>
 
 <ul>
@@ -1450,7 +1449,7 @@
 <p>The only way to access something <strong>in heap</strong> is <strong>through a pointer.</strong></p>
 </li>
 </ul>
-<p><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\List.assets\image-20241018154916837.png" alt="image-20241018154916837" style="zoom:40%;" /></p>
+<p><img alt="right-way.png" src="../../assets/images/right-way.png" /></p>
 <h4 align='center'>right way</h4>
 
 <p>Create new Node</p>

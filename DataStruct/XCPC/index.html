@@ -2116,13 +2116,13 @@ f(n,k)=(f(n−1,k)+k)\mod n
 <h3 id="1_1">（1）满二叉树</h3>
 <p>每一层节点都是满的</p>
 <h3 id="2_1">（2）完全二叉树</h3>
+<p><img alt="tree-binary-proper.svg" src="../../assets/images/tree-binary-proper.svg" /></p>
 <p>最后一层有缺失</p>
-<p><img alt="tree-binary-proper" src="../assets/images/tree-binary-perfect.svg" /></p>
 <h3 id="3">（3）退化二叉树</h3>
 <p>每一个节点<strong>只有一个</strong>子节点</p>
 <h3 id="4_1">（4）完美二叉树</h3>
 <p>所有叶结点的深度均相同，且所有非叶节点的子节点数量均为 2 的二叉树称为完美二叉树。</p>
-<p><img alt="tree-binary-perfect" src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\培训文档.assets\tree-binary-perfect.svg" /></p>
+<p><img alt="tree-binary-perfect.svg" src="../../assets/images/tree-binary-perfect.svg" /></p>
 <hr />
 <h2 id="2_2">2、静态写法</h2>
 <div class="admonition tip">
@@ -2144,13 +2144,13 @@ f(n,k)=(f(n−1,k)+k)\mod n
 <ul>
 <li>先（根）序遍历</li>
 <li><strong>先根节点</strong>，再左子树，再右子树</li>
-<li><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\培训文档.assets\tree-basic-preorder.svg" alt="tree-basic-preorder" style="zoom:50%;" /></li>
+<li><img alt="tree-basic-preorder.svg" src="../../assets/images/tree-basic-preorder.svg" /></li>
 <li>中（根）序遍历</li>
 <li>先左子树，<strong>再根节点</strong>，再右子树</li>
-<li><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\培训文档.assets\tree-basic-inorder.svg" alt="tree-basic-inorder" style="zoom:50%;" /></li>
+<li><img alt="tree-basic-inorder.svg" src="../../assets/images/tree-basic-inorder.svg" /></li>
 <li>后（根）序遍历</li>
 <li>先左子树，再右子树，<strong>再根节点</strong></li>
-<li><img src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\培训文档.assets\tree-basic-postorder.svg" alt="tree-basic-postorder" style="zoom:50%;" /></li>
+<li><img alt="tree-basic-postorder.svg" src="../../assets/images/tree-basic-postorder.svg" /></li>
 </ul>
 <hr />
 <h3 id="eg6">e.g.6二叉树的遍历</h3>
@@ -2377,7 +2377,7 @@ f(n,k)=(f(n−1,k)+k)\mod n
 </span></code></pre></div>
 <hr />
 <h1 id="_3">四、并查集</h1>
-<p><img alt="disjoint-set-find" src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\培训文档.assets\disjoint-set-find.svg" /></p>
+<p><img alt="disjoint-set-find" src="../../assets/images/disjoint-set-find.svg" /></p>
 <p>顾名思义，并查集支持两种操作：</p>
 <ul>
 <li>合并（Union）：合并两个元素所属集合（合并对应的树）</li>
@@ -2408,7 +2408,7 @@ f(n,k)=(f(n−1,k)+k)\mod n
 <summary>Tip</summary>
 <p>在递归查找过程中，路径上的每个节点的父节点都直接指向根节点<code>s[x] = find_set(s[x])</code>。这样可以加速后续的查找操作，减少树的高度，从而优化查询效率。</p>
 </details>
-<p><img alt="disjoint-set-compress" src="C:\Users\Devlin\Desktop\Uni\Programming\DataStruct\培训文档.assets\disjoint-set-compress.svg" /></p>
+<p><img alt="disjoint-set-compress" src="../../assets/images/disjoint-set-compress.svg" /></p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">find_set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">){</span>
@@ -2430,10 +2430,10 @@ f(n,k)=(f(n−1,k)+k)\mod n
 <p>该函数用于将 x 和 y 所在的集合合并成一个集合。</p>
 <ul>
 <li>
-<p>查找根节点：首先分别查找 x 和 y 所在集合的根节点，使用 find_set(x) 和 find_set(y)。</p>
+<p>查找根节点：首先分别查找 x 和 y 所在集合的根节点，使用 <code>find_set(x)</code> 和 <code>find_set(y)</code>。</p>
 </li>
 <li>
-<p>合并操作：将 y 集合的根节点指向 x 集合的根节点，即 s[find_set(x)] = s[find_set(y)]。这样，x 和 y 所在的两个集合就被合并成了一个集合。</p>
+<p>合并操作：将 y 集合的根节点指向 x 集合的根节点，即 <code>s[find_set(x)] = s[find_set(y)]</code>。这样，x 和 y 所在的两个集合就被合并成了一个集合。</p>
 </li>
 </ul>
 </li>
