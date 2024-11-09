@@ -1,4 +1,4 @@
-/*:root > * {*/
+:root > * {
 /*  !* 背景色 *!*/
 /*  --md-code-bg-color: #282a36;*/
 /*  !* 数字 *!*/
@@ -28,8 +28,8 @@
 /*  !* 标点符号 *!*/
 /*  --md-code-hl-punctuation-color: #f8f8f2;*/
 
-/*  !* 注释 *!*/
-/*  --md-code-hl-comment-color: #ff9900;*/
+  /* 注释 */
+  --md-code-hl-comment-color: #f3a16d;
 
 /*  !* 泛型 *!*/
 /*  --md-code-hl-generic-color: #f8f8f2;*/
@@ -37,4 +37,4 @@
 /*  !* 变量 *!*/
 /*  --md-code-hl-variable-color: #f8f8f2;*/
 
-/*}*/
+}
