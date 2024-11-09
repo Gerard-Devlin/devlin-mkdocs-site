@@ -1540,10 +1540,12 @@ y=f(x)
 <li>可以没有return</li>
 <li>调用的时候不能做返回值的赋值</li>
 </ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <blockquote>
-<p>[!IMPORTANT]</p>
 <p>如果函数有返回值，必须使用带值的<code>return</code></p>
 </blockquote>
+</div>
 <h2 id="721">7.2.1</h2>
 <h3 id="_6">函数原型</h3>
 <h4 id="_7">函数先后关系</h4>
@@ -1551,8 +1553,9 @@ y=f(x)
 <ul>
 <li>C的编译器自上而下分析你的代码</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <blockquote>
-<p>[!IMPORTANT]</p>
 <p>一般：函数要写在调用之前</p>
 <p>解决：可以将==函数头==搬到程序前，以达到让main程序一目了然→<mark>原型声明</mark></p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">         </span><span class="c1">//声明</span>
@@ -1570,6 +1573,7 @@ y=f(x)
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
 </span></code></pre></div>
 </blockquote>
+</div>
 <h2 id="722">7.2.2</h2>
 <h3 id="_8">参数传递</h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">cheer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span>
@@ -1614,10 +1618,12 @@ y=f(x)
 </span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
 </span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="c1">//这段代码并不能达到交换两数的效果→每个函数都有自己的变量空间</span>
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <blockquote>
-<p>[!WARNING]</p>
 <p>C在调用函数时，永远只能传值给函数</p>
 </blockquote>
+</div>
 <h2 id="723_1">7.2.3</h2>
 <h3 id="_11">本地变量</h3>
 <ul>
@@ -1633,8 +1639,9 @@ y=f(x)
 生存期--&gt;什么时候这个变量开始出现了，到什么时候它消亡了
 块--&gt;作用域:决定
 作用域--&gt;在（代码的）什么范围内可以访问这个变量（这个变量可以起作用）</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <blockquote>
-<p>[!TIP]</p>
 <ul>
 <li>本地变量是定义在块内的</li>
 <li>它可以是定义在函数的块内</li>
@@ -1648,6 +1655,7 @@ y=f(x)
 <li>参数在进入函数的时候被初始化了</li>
 </ul>
 </blockquote>
+</div>
 <h2 id="724">7.2.4</h2>
 <h3 id="_12">没有参数时</h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">f</span><span class="p">()</span><span class="w">        </span><span class="c1">//不建议，表示参数未知</span>

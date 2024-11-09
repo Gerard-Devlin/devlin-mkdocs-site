@@ -1658,13 +1658,15 @@
 <h3 id="_1">取地址运算</h3>
 <h4 id="_2">运算符<code>&amp;</code></h4>
 <p>获得变量的地址，它的操作必须是地址</p>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
 <blockquote>
-<p>[!CAUTION]</p>
 <p>地址大小是否与<code>int</code>相同取决于编译器</p>
 <p><code>&amp;(a±b)</code>不能取地址</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%p&quot;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">i</span><span class="p">);</span><span class="c1">//&amp;i 表示打印变量地址</span>
 </span></code></pre></div>
 </blockquote>
+</div>
 <h2 id="912">9.1.2</h2>
 <h3 id="_3">指针</h3>
 <p>就是==保存地址==的变量</p>
@@ -1784,10 +1786,12 @@
 </span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
 </span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
 </span></code></pre></div>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
 <blockquote>
-<p>[!IMPORTANT]</p>
 <p><strong>指针没有指向变量地址，就开始使用指针</strong></p>
 </blockquote>
+</div>
 <h2 id="914">9.1.4</h2>
 <h3 id="_6">指针和数组</h3>
 <h4 id="_7">传入数组成了什么？</h4>
@@ -1818,13 +1822,15 @@
 </span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="p">}</span>
 </span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <blockquote>
-<p>[!NOTE]</p>
 <ul>
 <li>函数参数表中的数组其实是指针</li>
 <li><code>sizeof(a) == sizeof(int*)</code></li>
 </ul>
 </blockquote>
+</div>
 <h3 id="_8">数组变量是特殊的指针</h3>
 <p>数组本身表达地址</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="p">;</span><span class="c1">//无需用&amp;取地址</span>
@@ -1844,11 +1850,13 @@
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kt">int</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 </span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <blockquote>
-<p>[!IMPORTANT]</p>
 <p><code>const</code>在<code>*</code>前：所指的东西不能被修改</p>
 <p><code>const</code>在<code>*</code>后：指针不能被修改</p>
 </blockquote>
+</div>
 <h3 id="const"><code>const</code>数组</h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,};</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1">//不可修改，必须初始化</span>

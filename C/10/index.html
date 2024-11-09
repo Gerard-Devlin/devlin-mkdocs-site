@@ -1911,10 +1911,12 @@
 <li>字符串以==数组==形式存在，以<u><strong>数组</strong></u>或者<u><strong>指针</strong></u>形式访问</li>
 <li><code>string.h</code>有很多处理字符串的函数</li>
 </ul>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
 <blockquote>
-<p>[!CAUTION]</p>
 <p>问题：如果我想在字符串中包含一个 <code>\0</code> 字符而不终止字符串怎么办❓❓❓</p>
 </blockquote>
+</div>
 <hr />
 <h4 id="_4">字符串变量</h4>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">str</span><span class="o">=</span><span class="s">&quot;Hello&quot;</span><span class="p">;</span>
@@ -1926,14 +1928,16 @@
 <li>“Hello”会被编译器变成一个<strong>字符数组</strong>放在某处，这个数组的长度是6，结尾还有表示结束的0</li>
 <li>两个<strong>相邻</strong>字符串常量会被连在一起</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <blockquote>
-<p>[!NOTE]</p>
 <ul>
 <li>C语言的字符串是以字符数组的形态存在的</li>
 <li><strong>不能用运算符</strong>对字符串做运算</li>
 <li>通过数组的方式可以遍历字符串</li>
 </ul>
 </blockquote>
+</div>
 <h2 id="1012">10.1.2</h2>
 <h3 id="_6">字符串变量</h3>
 <p><div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1987,11 +1991,13 @@ MEMORY==&gt;s3
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>            处理参数
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            动态分配内存
 </span></code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <blockquote>
-<p>[!TIP]</p>
 <p><strong>构造</strong>字符串→数组</p>
 <p><strong>处理</strong>一个字符串→指针</p>
 </blockquote>
+</div>
 <h4 id="char"><code>char*</code>是字符串？</h4>
 <ul>
 <li>字符串<strong>可以是</strong><code>char*</code>形式</li>
@@ -2041,11 +2047,13 @@ s--&gt;title\0</code></pre>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">}</span>
 </span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <blockquote>
-<p>[!TIP]</p>
 <h4 id="_8"><strong>安全输入</strong></h4>
 <p><code>%ns</code>限定输入字符串长度</p>
 </blockquote>
+</div>
 <h3 id="_9">常见错误</h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">string</span><span class="p">;</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="n">string</span><span class="p">);</span>
@@ -2238,11 +2246,13 @@ s--&gt;title\0</code></pre>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">strcpy</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="kr">restrict</span><span class="w"> </span><span class="n">src</span><span class="p">);</span>
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="c1">//把src内容拷贝到dst中</span>
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <blockquote>
-<p>[!IMPORTANT]</p>
 <p><code>restrict</code>表明<code>src</code>和<code>dst</code><strong><mark>不重叠</mark></strong>(C99)</p>
 <p>返回<code>dst</code>→为了<strong>链起</strong>代码来❓❓</p>
 </blockquote>
+</div>
 <h3 id="_14">复制一个字符串</h3>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">dst</span><span class="o">=</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">strcpy</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span><span class="n">src</span><span class="p">);</span>
