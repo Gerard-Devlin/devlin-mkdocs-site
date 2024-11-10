@@ -1,0 +1,103 @@
+site_name: Tech Mind
+site_url: https://Gerard-Devlin.github.io/TechMind/
+repo_url: https://github.com/Gerard-Devlin/TechMind
+repo_name: Gerard-Devlin/TechMind
+# 自定义页脚文本
+copyright: "Copyright © 2024 Devlin"
+theme:
+  name: material
+  icon:
+    logo: material/book-open-variant
+    repo: fontawesome/brands/gitkraken
+    favicon: fontawesome/brands/gitkraken
+    annotation: material/google-circles
+
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.tabs
+    - navigation.footer
+    - navigation.instant.progress
+    # 代码块功能
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    # 提示功能
+    - content.tooltips
+    - header.autohide
+    - toc
+  # 配色方案
+  palette:
+    # 暗色模式
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    # 亮色模式
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+
+# Markdown 扩展
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  # Admonitions 支持
+  - admonition
+  - pymdownx.details
+
+  # 格式化支持
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # 代码高亮
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+        alternate_style: true
+
+  # 图表支持
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # LaTeX 支持
+  - pymdownx.arithmatex:
+      generic: true
+
+  # 列表支持
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # 提示支持
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+# JavaScript 支持
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0/dist/contrib/auto-render.min.js
+
+# CSS 支持
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
