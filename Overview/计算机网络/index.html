@@ -1039,6 +1039,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、划分问题
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1229,6 +1238,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、划分问题
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1278,6 +1296,7 @@
 <li><a href="#_9">五、子网划分</a><ul>
 <li><a href="#1">1、地址分类</a></li>
 <li><a href="#2">2、子网掩码</a></li>
+<li><a href="#3">3、划分问题</a></li>
 </ul>
 </li>
 </ul>
@@ -1300,21 +1319,83 @@
 <h2 id="isp">现代：多层ISP</h2>
 <h1 id="_7">三、参考模型</h1>
 <h2 id="isoosi7">ISO/OSI（7层）</h2>
-<p>应用层（报文，表示层，会话层（报文
-传输层（报文
-    端到端
-网络层（分组
-    路由选择
-数据链路层（frame，物理层（bit</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">层级</th>
+<th style="text-align: center;">单位</th>
+<th style="text-align: center;">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">应用层</td>
+<td style="text-align: center;">报文</td>
+<td style="text-align: center;">为应用程序提供网络服务</td>
+</tr>
+<tr>
+<td style="text-align: center;">表示层</td>
+<td style="text-align: center;">报文</td>
+<td style="text-align: center;">数据格式转换、加密、压缩</td>
+</tr>
+<tr>
+<td style="text-align: center;">会话层</td>
+<td style="text-align: center;">报文</td>
+<td style="text-align: center;">建立、管理和终止会话</td>
+</tr>
+<tr>
+<td style="text-align: center;">传输层</td>
+<td style="text-align: center;">报文</td>
+<td style="text-align: center;"><mark>端到端</mark> 的可靠数据传输</td>
+</tr>
+<tr>
+<td style="text-align: center;">网络层</td>
+<td style="text-align: center;">分组</td>
+<td style="text-align: center;"><mark>路由选择</mark> 和分组转发</td>
+</tr>
+<tr>
+<td style="text-align: center;">数据链路层</td>
+<td style="text-align: center;">帧</td>
+<td style="text-align: center;">帧编码、差错控制和流量控制</td>
+</tr>
+<tr>
+<td style="text-align: center;">物理层</td>
+<td style="text-align: center;">比特</td>
+<td style="text-align: center;">比特流的传输和物理接口</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tcpip4">TCP/IP（4层）</h2>
-<p>应用层
-    众多协议
-<strong><mark>传输层</mark></strong>
-    TCP 基于连接的传输层协议
-    UDP 基于无连接的协议
-互联网层
-    IP（ARP，RARP等）：不可靠 无连接
-网络接口层（802.3等物理协议</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用层</td>
+<td>众多协议</td>
+</tr>
+<tr>
+<td><mark>传输层</mark></td>
+<td>TCP 基于连接的传输层协议</td>
+</tr>
+<tr>
+<td></td>
+<td>UDP 基于无连接的协议</td>
+</tr>
+<tr>
+<td>互联网层</td>
+<td>IP（ARP，RARP等）：不可靠 无连接</td>
+</tr>
+<tr>
+<td>网络接口层</td>
+<td>802.3等物理协议</td>
+</tr>
+</tbody>
+</table>
 <h1 id="_8">四、硬件</h1>
 <ul>
 <li>
@@ -1359,7 +1440,8 @@
 </details>
 <h2 id="2">2、子网掩码</h2>
 <p>用来划分网络，<strong>长度：<em>网络号+子网号</em></strong></p>
-<p>表示方法1：ip/网络号位数+子网位数</p>
+<hr />
+<p>表示方法1：IP/网络号位数+子网位数</p>
 <details class="question" open="open">
 <summary>Question</summary>
 <blockquote>
@@ -1367,6 +1449,13 @@
   23个1为掩码，即在点分十进制中表示为255.255.254.0</p>
 </blockquote>
 </details>
+<p>表示方法2：IP（直接根据是哪一类网络判断掩码）</p>
+<blockquote>
+<p>A：255.0.0.0</p>
+<p>B：255.255.0.0</p>
+<p>C：255.255.255.0</p>
+</blockquote>
+<hr />
 <details class="question" open="open">
 <summary>Question</summary>
 <blockquote>
@@ -1387,6 +1476,66 @@
     用于测试网络连接的连通性。 <code>ping</code> 命令发送ICMP（Internet Control Message Protocol）回显请求消息给目标主机，并等待回显应答，以此来检查网络的连通性和延迟。</p>
 </blockquote>
 </details>
+<h2 id="3">3、划分问题</h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<blockquote>
+<p>203.120.111.0/24，现在有3个路由器相连，并且每个各自连接一个局域网（最多30台机器），请给出一种IP划分方式</p>
+</blockquote>
+<p>划分成3个子网，原来网络地址24位
+一共3+24=27，即子网掩码为27个1，化为点分十进制为255.255.255.224</p>
+<pre class="mermaid"><code>graph LR
+subgraph "203.120.111"
+    A[网络号]
+end
+subgraph "XXX"
+    B[子网号&lt;br/&gt;000-子网1&lt;br/&gt;001-子网2&lt;br/&gt;010-子网3]
+end
+subgraph "XXXXX"
+    C[主机号&lt;br/&gt;00001-11110&lt;br/&gt;共30个主机]
+end
+
+A --&gt; B
+B --&gt; C
+
+style A fill:#f9f,stroke:#333,stroke-width:2px
+style B fill:#bbf,stroke:#333,stroke-width:2px
+style C fill:#bfb,stroke:#333,stroke-width:2px</code></pre>
+<table>
+<thead>
+<tr>
+<th>网络名称</th>
+<th>网络地址</th>
+<th>可用IP范围</th>
+<th>广播地址</th>
+<th>子网掩码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子网1</td>
+<td>203.120.111.0</td>
+<td>203.120.111.1 - 203.120.111.30</td>
+<td>203.120.111.31</td>
+<td>255.255.255.224</td>
+</tr>
+<tr>
+<td>子网2</td>
+<td>203.120.111.32</td>
+<td>203.120.111.33 - 203.120.111.62</td>
+<td>203.120.111.63</td>
+<td>255.255.255.224</td>
+</tr>
+<tr>
+<td>子网3</td>
+<td>203.120.111.64</td>
+<td>203.120.111.65 - 203.120.111.94</td>
+<td>203.120.111.95</td>
+<td>255.255.255.224</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
